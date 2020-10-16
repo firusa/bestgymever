@@ -15,10 +15,10 @@ public class MemberCheck {
     public static String status(String payment) {
         LocalDate currentDate = LocalDate.now();
         LocalDate paymentDate = LocalDate.parse(payment);
-        Period period = Period.between(currentDate, paymentDate);//method that creates object period
+        Period period = Period.between(paymentDate, currentDate);//method that creates object period
 
         String statusResult;
-        if (period.getDays() <= 365) {
+        if (period.getYears() < 1) {
             statusResult = "Current member";
         } else {
             statusResult = "Former member";

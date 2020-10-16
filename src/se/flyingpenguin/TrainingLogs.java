@@ -10,7 +10,7 @@ public class TrainingLogs {
         boolean numeric = true;
 
         try {
-            int num = Integer.parseInt(input2);
+            long num = Long.parseLong(input2);
         } catch (NumberFormatException e) {
             numeric = false;
         }

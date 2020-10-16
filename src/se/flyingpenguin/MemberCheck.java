@@ -15,7 +15,7 @@ public class MemberCheck {
     public static String status(String payment) {
         LocalDate currentDate = LocalDate.now();
         LocalDate paymentDate = LocalDate.parse(payment);
-        Period period = Period.between(currentDate, paymentDate);
+        Period period = Period.between(currentDate, paymentDate);//method that creates object period
 
         String statusResult;
         if (period.getDays() <= 365) {
